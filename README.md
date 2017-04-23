@@ -31,4 +31,4 @@ To run the app, follow these steps.
   ```shell
   npm run test:watch
   ```
-8. Browse to [http://localhost:3000](htt
+8. Browse to [http://localhost:3000](http://localhost:3000)
