@@ -5,6 +5,8 @@ import React from 'react'
 import { Link } from 'react-router'
 import styled from 'styled-components'
 
+import Button from '../common/elements/Button'
+
 // Create a <Title> react component that renders an <h1> which is centered, palevioletred and sized at 1.5em
 const Title = styled.h1`
   font-size: 2.5em;
@@ -24,7 +26,7 @@ const HomePage = () => (
     <Title>Using React, Redux and Saga with Lottoland APIs</Title>
     <div>
       <Link to="lotteries">
-        <button className="btn btn-lg btn-primary">View Lotteries</button>
+        <Button primary>View Lotteries</Button>
       </Link>
     </div>
   </Wrapper>
