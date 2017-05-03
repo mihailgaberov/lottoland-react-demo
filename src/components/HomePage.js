@@ -15,13 +15,13 @@ const Title = styled.h1`
   font-family: Gotham, sans-serif;
   text-align: center;
   color: palevioletred;
-`;
+`
 
 // Create a <Wrapper> react component that renders a <section> with some padding and a papayawhip background
 const Wrapper = styled.section`
   padding: 4em;
   background: papayawhip;
-`;
+`
 
 const HomePage = () => (
   <Wrapper>
@@ -34,7 +34,7 @@ const HomePage = () => (
     <Highlighted>
       <ContactsElement position="left" width="352">
         <span>Mihail Gaberov</span>
-        <span>Front End Developer at <img src="https://www.lottoland.com/skins/lottoland/images/logo/ll-logo-green-14c4a0ddaf8c5179.svg" width="125" height="39"/></span>
+        <span>Front End Developer at <img src="https://www.lottoland.com/skins/lottoland/images/logo/ll-logo-green-14c4a0ddaf8c5179.svg" alt="Lottoland Logo" width="125" height="39"/></span>
       </ContactsElement>
       <ContactsElement position="left" width="200">
         <div><em className="fa fa-lg fa-home" aria-hidden="true"/><a href="https://mihail-gaberov.eu">mihail-gaberov.eu</a></div>
