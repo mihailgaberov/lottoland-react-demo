@@ -19,8 +19,12 @@ const Title = styled.h1`
 
 // Create a <Wrapper> react component that renders a <section> with some padding and a papayawhip background
 const Wrapper = styled.section`
-  padding: 4em;
+  padding: 2em;
   background: papayawhip;
+  
+  @media only screen and (min-width: 680px) {
+    padding: 4em;    
+  }
 `
 
 const HomePage = () => (

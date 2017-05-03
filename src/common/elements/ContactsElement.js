@@ -9,10 +9,12 @@ const ContactsElement = styled.div`
   display: block;
   width: ${props => props.width};
   font-size: 1.2em;
+  margin-bottom: 28px;
   
   @media only screen and (min-width: 680px) {
     display: flex;
     flex-direction: column;
+    margin-bottom: 0;
   }
   
   a {
