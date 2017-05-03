@@ -6,10 +6,14 @@ import styled from 'styled-components'
 const ContactsElement = styled.div`
  /* Adapt the element's position in respect of the parent element based on position prop */
   text-align: ${props => props.position};
-  display: flex;
+  display: block;
   width: ${props => props.width};
-  flex-direction: column;
   font-size: 1.2em;
+  
+  @media only screen and (min-width: 680px) {
+    display: flex;
+    flex-direction: column;
+  }
   
   a {
     color: white;
