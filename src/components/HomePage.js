@@ -12,7 +12,7 @@ import ContactsElement from '../common/elements/ContactsElement'
 // Create a <Title> react component that renders an <h1> which is centered, palevioletred and sized at 1.5em
 const Title = styled.h1`
   font-size: 2.5em;
-  font-family: Gotham, sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
   text-align: center;
   color: palevioletred;
 `

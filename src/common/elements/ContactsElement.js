@@ -10,7 +10,6 @@ const ContactsElement = styled.div`
   width: ${props => props.width};
   flex-direction: column;
   font-size: 1.2em;
-  font-family: Gotham;
   
   a {
     color: white;
