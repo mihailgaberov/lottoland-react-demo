@@ -20,6 +20,6 @@ const ContactsElement = styled.div`
     color: papayawhip;
     margin-right: .4em;
   }
-`;
+`
 
-export default ContactsElement;
+export default ContactsElement

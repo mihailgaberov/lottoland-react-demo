@@ -9,6 +9,6 @@ const HighlightedArea = styled.div`
   display: flex;
   justify-content: space-between;
   padding: 2em;
-`;
+`
 
-export default HighlightedArea;
+export default HighlightedArea
