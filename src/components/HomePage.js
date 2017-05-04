@@ -2,14 +2,13 @@
  * Created by Mihail on 4/23/2017.
  */
 import React from 'react'
-import { Link } from 'react-router'
+import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
 import Button from '../common/elements/Button'
 import Highlighted from '../common/elements/HighlightedArea'
 import ContactsElement from '../common/elements/ContactsElement'
 
-// Create a <Title> react component that renders an <h1> which is centered, palevioletred and sized at 1.5em
 const Title = styled.h1`
   font-size: 2.5em;
   font-family: Helvetica, Arial, sans-serif;
@@ -17,7 +16,6 @@ const Title = styled.h1`
   color: palevioletred;
 `
 
-// Create a <Wrapper> react component that renders a <section> with some padding and a papayawhip background
 const Wrapper = styled.section`
   padding: 2em;
   background: papayawhip;

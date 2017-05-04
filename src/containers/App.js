@@ -1,21 +1,21 @@
 /**
  * Created by Mihail on 4/23/2017.
  */
-import React, { Component, PropTypes } from 'react'
+import React, { Component } from 'react'
+// import PropTypes from 'prop-types'
+
 import Header from '../common/Header'
+import Nav from '../common/Nav'
 
 class App extends Component {
   render() {
     return (
       <div className="container-fluid text-center">
         <Header />
-        {this.props.children}
+        <Nav />
       </div>
-    );
+    )
   }
-}
-App.propTypes = {
-  children: PropTypes.object.isRequired
 }
 
 export default App

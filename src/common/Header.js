@@ -2,14 +2,14 @@
  * Created by Mihail on 4/23/2017.
  */
 import React from 'react'
-import { Link, IndexLink } from 'react-router'
+import { Link } from 'react-router-dom'
 
 const Header = () => (
   <div className="text-center">
     <nav className="navbar navbar-default">
-      <IndexLink to="/" activeClassName="active">Home</IndexLink>
+      <Link to="/">Home</Link>
       {" | "}
-      <Link to="lotteries" activeClassName="active">Lotteries</Link>
+      <Link to="lotteries">Lotteries</Link>
     </nav>
   </div>
 )
