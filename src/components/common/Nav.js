@@ -9,12 +9,12 @@ import EnsureLoggedInContainer from '../../containers/EnsureLoggedInContainer'
 import LotteryPage from '../pages/LotteryPage'
 
 const Nav = () => (
-<Switch>
+  <Switch>
     <Route exact path='/' component={HomePage}/>
     <Route component={EnsureLoggedInContainer}>
-        <Route path='/lotteries' component={LotteryPage}/>
-    </Route>
-</Switch>
+     <Route path='/lotteries' component={LotteryPage}/>
+     </Route>
+  </Switch>
 )
 
 export default Nav

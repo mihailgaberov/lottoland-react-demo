@@ -3,7 +3,7 @@
  */
 import { combineReducers } from 'redux'
 
-import login from './loginReducer'
+import login from './authReducer'
 import modal from './modalReducer'
 
 const rootReducer = combineReducers({

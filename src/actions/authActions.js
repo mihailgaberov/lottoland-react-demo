@@ -39,6 +39,6 @@ export function getToken (state) {
   return state.getIn(['auth', 'token'], null)
 }
 
-export function getIsAuthenticated (state) {
+export function isAuthenticated (state) {
   return getToken(state) !== null
 }

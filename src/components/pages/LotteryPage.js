@@ -23,7 +23,7 @@ const Wrapper = styled.section`
 
 const LotteryPage = () => (
     <Wrapper>
-        <Title>Using React, Redux and Saga with Lottoland APIs</Title>
+        <Title>Lotteries</Title>
     </Wrapper>
 )
 
