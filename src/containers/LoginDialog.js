@@ -1,0 +1,61 @@
+/**
+ * Created by mgab on 05/05/2017.
+ */
+import React, { Component } from 'react'
+import { connect } from 'react-redux'
+
+import { AUTH_ERROR, logIn, resetPassword } from '../modules/auth'
+import Dialog from '../components/Dialog'
+import Form from '../components/Form'
+
+class LoginDialog extends Component {
+  constructor() {
+    super()
+    this.state = {}
+  }
+
+  componentWillMount() {
+    document.addEventListener('keyup', this.props.closeDialog, false)
+  }
+
+  componentWillUnmount() {
+    document.removeEventListener('keyup', this.props.closeDialog, false)
+  }
+
+  login() {
+    this.props.login(
+      this.refs['loginForm'].refs['email'].getValue(),
+      this.refs['loginForm'].refs['password'].getValue()
+    )
+  }
+
+
+  render() {
+    return (
+      <div className='LoginDialog' onClick={this.props.closeDialog}
+           onKeyPress={this.props.closeDialog}>
+        <Dialog
+          modal
+          header='Login'
+          confirmLabel='Login'
+          onAction={this.login.bind(this)}
+          type='rounded'
+          className='loginBtn'
+        >
+          {this.props.error && <div className='error'>{this.props.error}</div>}
+          <Form onSubmit={this.login.bind(this)} ref='loginForm' key='loginForm' fieldsIds={['email', 'password']}/>
+        </Dialog>}
+      </div>
+    )
+  }
+}
+
+LoginDialog.propTypes = {
+  closeDialog: React.PropTypes.func
+}
+
+export default connect(
+  (dispatch) => ({
+    login: (email, password) => dispatch(logIn(email, password))
+  })
+)(LoginDialog)

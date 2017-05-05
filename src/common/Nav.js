@@ -4,9 +4,9 @@
 import React from 'react'
 import { Switch, Route } from 'react-router-dom'
 
-import HomePage from '../components/HomePage'
+import HomePage from '../components/pages/HomePage'
 import EnsureLoggedInContainer from '../containers/EnsureLoggedInContainer'
-import LotteryPage from '../components/LotteryPage'
+import LotteryPage from '../components/pages/LotteryPage'
 
 const Nav = () => (
 <Switch>

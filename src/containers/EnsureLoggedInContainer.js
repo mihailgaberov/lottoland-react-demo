@@ -5,6 +5,8 @@ import { Component } from 'react'
 import { connect } from 'react-redux'
 import { BrowserRouter } from 'react-router-dom'
 
+import { login } from '../API/api'
+
 class EnsureLoggedInContainer extends Component {
   componentDidMount() {
     let isLoggedIn = false

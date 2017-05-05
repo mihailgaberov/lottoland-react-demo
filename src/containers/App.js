@@ -7,6 +7,7 @@ import { BrowserRouter } from 'react-router-dom'
 
 import Header from '../common/Header'
 import Nav from '../common/Nav'
+import { login } from '../API/api'
 
 class App extends Component {
 
