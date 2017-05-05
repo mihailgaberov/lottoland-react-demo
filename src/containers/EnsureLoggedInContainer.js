@@ -18,7 +18,7 @@ class EnsureLoggedInContainer extends Component {
 
     if (!isLoggedIn) {
       //dispatch(setRedirectUrl(currentURL))
-      BrowserRouter.replace("/login")
+      BrowserRouter.replace("/submitLogin")
     }
   }
 

@@ -4,7 +4,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
-import { AUTH_ERROR, logIn, resetPassword } from '../modules/auth'
+import { logIn } from '../actions/loginActions'
 import Dialog from '../components/Dialog'
 import Form from '../components/Form'
 
@@ -22,8 +22,8 @@ class LoginDialog extends Component {
     document.removeEventListener('keyup', this.props.closeDialog, false)
   }
 
-  login() {
-    this.props.login(
+  submitLogin() {
+    this.props.submitLogin(
       this.refs['loginForm'].refs['email'].getValue(),
       this.refs['loginForm'].refs['password'].getValue()
     )
@@ -38,12 +38,12 @@ class LoginDialog extends Component {
           modal
           header='Login'
           confirmLabel='Login'
-          onAction={this.login.bind(this)}
+          onAction={this.submitLogin.bind(this)}
           type='rounded'
           className='loginBtn'
         >
           {this.props.error && <div className='error'>{this.props.error}</div>}
-          <Form onSubmit={this.login.bind(this)} ref='loginForm' key='loginForm' fieldsIds={['email', 'password']}/>
+          <Form onSubmit={this.submitLogin.bind(this)} ref='loginForm' key='loginForm' fieldsIds={['email', 'password']}/>
         </Dialog>}
       </div>
     )
@@ -56,6 +56,6 @@ LoginDialog.propTypes = {
 
 export default connect(
   (dispatch) => ({
-    login: (email, password) => dispatch(logIn(email, password))
+    submitLogin: (email, password) => dispatch(logIn(email, password))
   })
 )(LoginDialog)

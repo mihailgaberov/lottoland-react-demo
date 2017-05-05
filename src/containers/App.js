@@ -5,8 +5,8 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { BrowserRouter } from 'react-router-dom'
 
-import Header from '../common/Header'
-import Nav from '../common/Nav'
+import Header from '../components/common/Header'
+import Nav from '../components/common/Nav'
 import { login } from '../API/api'
 
 class App extends Component {
