@@ -3,16 +3,17 @@
  */
 import React from 'react'
 import { Switch, Route } from 'react-router-dom'
-// import EnsureLoggedInContainer from './containers/EnsureLoggedInContainer'
+
 import HomePage from '../components/HomePage'
-// import LotteryPage from './components/LotteryPage'
+import EnsureLoggedInContainer from '../containers/EnsureLoggedInContainer'
+import LotteryPage from '../components/LotteryPage'
 
 const Nav = () => (
 <Switch>
     <Route exact path='/' component={HomePage}/>
-    {/*<Route component={EnsureLoggedInContainer}>
+    <Route component={EnsureLoggedInContainer}>
         <Route path='/lotteries' component={LotteryPage}/>
-    </Route>*/}
+    </Route>
 </Switch>
 )
 
