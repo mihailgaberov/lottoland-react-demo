@@ -2,7 +2,6 @@
  * Created by Mihail on 4/23/2017.
  */
 import React, { Component } from 'react'
-// import PropTypes from 'prop-types'
 
 import Header from '../common/Header'
 import Nav from '../common/Nav'

@@ -4,7 +4,7 @@
   "private": true,
   "devDependencies": {
     "react-scripts": "0.9.5",
-    "styled-components": "^1.4.5"
+    "styled-components": "^1.4.6"
   },
   "dependencies": {
     "prop-types": "^15.5.8",
