@@ -1,7 +1,6 @@
 /**
  * Created by mgab on 05/05/2017.
  */
-'use strict'
 
 export const AUTH_REQUEST = 'AUTH_REQUEST'
 export const AUTH_SUCCESS = 'AUTH_SUCCESS'

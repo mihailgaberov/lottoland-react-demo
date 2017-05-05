@@ -3,23 +3,23 @@
  */
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { BrowserRouter } from 'react-router-dom'
 
 import Header from '../components/common/Header'
 import Nav from '../components/common/Nav'
-import { login } from '../API/api'
 
 class App extends Component {
 
   componentDidUpdate(prevProps) {
-    const { dispatch, redirectUrl } = this.props
+    // const { dispatch, redirectUrl } = this.props
+    const { redirectUrl } = this.props
     const isLoggingOut = prevProps.isLoggedIn && !this.props.isLoggedIn
     const isLoggingIn = !prevProps.isLoggedIn && this.props.isLoggedIn
 
     if (isLoggingIn) {
       // dispatch(navigateTo(redirectUrl))
-      BrowserRouter.push(redirectUrl);
+      history.push(redirectUrl)
     } else if (isLoggingOut) {
+      history.push('/')
       //dispatch(navigateTo('/'))
     }
   }
@@ -29,7 +29,7 @@ class App extends Component {
       <div className="container-fluid text-center">
         <Header />
         <Nav />
-        this.props.children
+        {this.props.children}
       </div>
     )
   }

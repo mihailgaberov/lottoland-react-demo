@@ -3,9 +3,6 @@
  */
 import { Component } from 'react'
 import { connect } from 'react-redux'
-import { BrowserRouter } from 'react-router-dom'
-
-import { login } from '../API/api'
 
 class EnsureLoggedInContainer extends Component {
   componentDidMount() {
@@ -17,8 +14,7 @@ class EnsureLoggedInContainer extends Component {
     console.log('>>> currentURL: ', currentURL)
 
     if (!isLoggedIn) {
-      //dispatch(setRedirectUrl(currentURL))
-      BrowserRouter.replace("/submitLogin")
+      history.replace("/login")
     }
   }
 

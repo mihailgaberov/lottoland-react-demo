@@ -3,8 +3,9 @@
  */
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import propTypes from 'prop-types'
 
-import { logIn } from '../actions/loginActions'
+import { logIn } from '../actions/authActions'
 import Dialog from '../components/Dialog'
 import Form from '../components/Form'
 
@@ -51,7 +52,7 @@ class LoginDialog extends Component {
 }
 
 LoginDialog.propTypes = {
-  closeDialog: React.PropTypes.func
+  closeDialog: propTypes.func
 }
 
 export default connect(

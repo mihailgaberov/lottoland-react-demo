@@ -7,9 +7,6 @@ import { Link } from 'react-router-dom'
 import LoginDialog from '../../containers/LoginDialog'
 
 class Header extends Component {
-  constructor(props) {
-    super(props)
-  }
 
   showLoginDialog() {
     this.props.showLogin()

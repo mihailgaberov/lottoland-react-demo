@@ -1,7 +1,6 @@
 /**
  * Created by mgab on 05/05/2017.
  */
-'use strict'
 import * as types from '../constants/actionTypes'
 
 export function logIn (username, password) {

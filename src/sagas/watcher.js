@@ -1,8 +1,6 @@
 /**
  * Created by mgab on 05/05/2017.
  */
-'use strict'
-
 import { takeLatest } from 'redux-saga/effects';
 import { authSaga } from './authSaga';
 import * as types from '../constants/actionTypes';

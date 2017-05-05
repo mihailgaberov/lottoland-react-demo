@@ -1,10 +1,10 @@
 /**
  * Created by mgab on 05/05/2017.
  */
-'use strict'
 
 import Button from './common/elements/Button'
-import React, { Component, PropTypes } from 'react'
+import React, { Component } from 'react'
+import propTypes from 'prop-types'
 
 class Dialog extends Component {
 
@@ -38,12 +38,12 @@ class Dialog extends Component {
 }
 
 Dialog.propTypes = {
-  header: PropTypes.string.isRequired,
-  confirmLabel: PropTypes.string,
-  modal: PropTypes.bool,
-  onAction: PropTypes.func,
-  type: PropTypes.string,
-  className: PropTypes.string
+  header: propTypes.string.isRequired,
+  confirmLabel: propTypes.string,
+  modal: propTypes.bool,
+  onAction: propTypes.func,
+  type: propTypes.string,
+  className: propTypes.string
 }
 
 Dialog.defaultProps = {
