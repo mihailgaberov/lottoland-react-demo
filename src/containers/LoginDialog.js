@@ -6,8 +6,8 @@ import { connect } from 'react-redux'
 import propTypes from 'prop-types'
 
 import { logIn } from '../actions/authActions'
-import Dialog from '../components/Dialog'
-import Form from '../components/Form'
+import Dialog from '../components/common/Dialog'
+import Form from '../components/common/Form'
 
 class LoginDialog extends Component {
   constructor() {

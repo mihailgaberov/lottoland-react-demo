@@ -5,7 +5,7 @@ import { connect } from 'react-redux'
 
 import Header from '../components/common/Header'
 import { getIsAuthenticated, logOut } from '../actions/authActions'
-import { getIsModalOpened, showModal, hideModal } from '../reducers/modalReducer'
+import { getIsModalOpened, showModal, hideModal } from '../actions/modalActions'
 
 export default connect((state) => ({
   isAuthenticated: getIsAuthenticated(state),
