@@ -36,15 +36,15 @@ export function logOut () {
   }
 }
 
-export function authSuccess (token, cookie, user) {
+export function authSuccess (token, user) {
   return {
     type: AUTH_SUCCESS,
-    payload: { token, cookie, user }
+    payload: { token, user }
   }
 }
 
 export function setUserInfo (token, user) {
-  return authSuccess(token, null, user)
+  return authSuccess(token, user)
 }
 
 export function authError (message) {
