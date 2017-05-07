@@ -44,8 +44,7 @@ class LoginDialog extends Component {
 }
 
 export default connect(
-  (state, ownProps) => ({
-  }),
+  (state, ownProps) => ({}),
   (dispatch) => ({
     submitLogin: (email, password) => dispatch(logIn(email, password)),
   })
