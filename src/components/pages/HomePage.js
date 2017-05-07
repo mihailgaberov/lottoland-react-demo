@@ -5,9 +5,9 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
-import Button from '../common/elements/Button'
-import Highlighted from '../common/elements/HighlightedArea'
-import ContactsElement from '../common/elements/ContactsElement'
+import Button from '../common/styled-components/Button'
+import Highlighted from '../common/styled-components/HighlightedArea'
+import ContactsElement from '../common/styled-components/ContactsElement'
 
 const Title = styled.h1`
   font-size: 2.5em;

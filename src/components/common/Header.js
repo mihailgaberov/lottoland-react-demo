@@ -32,6 +32,7 @@ class Header extends Component {
         </nav>
 
         <Route exact path='/' component={HomePage}/>
+        <Route path='/login' component={LoginDialog}/>
         <PrivateRoute path='/lotteries' component={LotteryPage}/>
 
         {this.props.showLoginModal && !this.props.isAuthenticated ?

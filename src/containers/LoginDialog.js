@@ -45,7 +45,7 @@ class LoginDialog extends Component {
         >
           {this.props.error && <div className='error'>{this.props.error}</div>}
           <Form onSubmit={this.submitLogin.bind(this)} ref='loginForm' key='loginForm' fieldsIds={['email', 'password']}/>
-        </Dialog>}
+        </Dialog>
       </div>
     )
   }
