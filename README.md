@@ -10,27 +10,16 @@ A demo app to backup an internal company presentation of FE technologies.
 To run the app, follow these steps.
 
 1. Ensure that [NodeJS](http://nodejs.org/) is installed. This provides the platform on which the build tooling runs.
-2. From the project folder, execute the following command:
+2. Install [yarn](https://yarnpkg.com/lang/en/docs/install/).
+3. From the project folder, execute the following command:
 
   ```shell
-  npm install
+  yarn
   ```
-  
-5. To run the app:
+ 
+4. To run the app:
 
   ```shell
-  npm run start
+  yarn start
   ```
-  
-6. To run only the tests:
-
-  ```shell
-  npm run test
-  ```
-  
-7. To run the test watcher:
-
-  ```shell
-  npm run test:watch
-  ```
-8. Browse to [http://localhost:3000](http://localhost:3000)
+5. Browse to [http://localhost:3000](http://localhost:3000)
