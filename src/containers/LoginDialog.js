@@ -3,24 +3,16 @@
  */
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import propTypes from 'prop-types'
 
 import { logIn } from '../actions/authActions'
 import Dialog from '../components/common/Dialog'
 import Form from '../components/common/Form'
 
 class LoginDialog extends Component {
+
   constructor() {
     super()
     this.state = {}
-  }
-
-  componentWillMount() {
-    document.addEventListener('keyup', this.props.closeDialog, false)
-  }
-
-  componentWillUnmount() {
-    document.removeEventListener('keyup', this.props.closeDialog, false)
   }
 
   submitLogin() {
@@ -51,12 +43,10 @@ class LoginDialog extends Component {
   }
 }
 
-LoginDialog.propTypes = {
-  closeDialog: propTypes.func
-}
-
 export default connect(
+  (state, ownProps) => ({
+  }),
   (dispatch) => ({
-    submitLogin: (email, password) => dispatch(logIn(email, password))
+    submitLogin: (email, password) => dispatch(logIn(email, password)),
   })
 )(LoginDialog)

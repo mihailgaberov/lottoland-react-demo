@@ -1,8 +1,9 @@
 /**
  * Created by mgab on 05/05/2017.
  */
-
 import React, { Component } from 'react'
+
+import FormInput from '../common/FormInput'
 
 class Form extends Component {
   constructor (props) {
@@ -10,12 +11,15 @@ class Form extends Component {
     this.getFields = this.getFields.bind(this)
   }
 
-  getData () {
-    let data = {}
-    this.getFields().forEach((field) => {
-      data[field.id] = this.refs[field.id].getValue()
-    })
-    return data
+  getValue () {
+    let field = this.refs.input
+    if ('input' in field) {
+      field = field.input
+    }
+
+    return 'value' in field
+      ? field.value
+      : field.getValue()
   }
 
   isValid () {
@@ -53,7 +57,7 @@ class Form extends Component {
       <form className='Form' onSubmit={this._submit.bind(this)}>{this.getFields().map((field) => {
         return (
           <div className='FormRow' id={`Form-Row-${field.id}`} key={field.id}>
-            <input type={field.type} ref={field.id} placeholder={field.label} />
+            <FormInput {...field} ref={field.id} />
           </div>
         )
       }, this)}
