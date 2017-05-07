@@ -34,11 +34,3 @@ export function authError (message) {
     payload: message
   }
 }
-
-export function getToken (state) {
-  return state.getIn(['auth', 'token'], null)
-}
-
-export function isAuthenticated (state) {
-  return getToken(state) !== null
-}

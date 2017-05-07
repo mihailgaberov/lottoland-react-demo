@@ -18,3 +18,12 @@ export default function (state = Map(), action) {
   }
   return state
 }
+
+export function getToken (state) {
+  return state.getIn(['auth', 'token'], null)
+}
+
+export function isAuthenticated (state) {
+  // return getToken(state) !== null
+  return false
+}

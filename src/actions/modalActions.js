@@ -17,6 +17,6 @@ export function hideModal(modal) {
   }
 }
 
-export function getIsModalOpened(state, modal) {
+export function isModalOpened(state, modal) {
   return state.getIn(['modal', modal], false)
 }

@@ -3,11 +3,11 @@
  */
 import { combineReducers } from 'redux'
 
-import login from './authReducer'
+import auth from './authReducer'
 import modal from './modalReducer'
 
 const rootReducer = combineReducers({
-  login,
+  auth,
   modal
 })
 
