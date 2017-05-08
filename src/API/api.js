@@ -1,15 +1,11 @@
 /**
  * Created by mgab on 05/05/2017.
  */
-require('dotenv').config();
 
-const CLIENT_ID = process.env.CLIENT_ID
-const SERVER = process.env.SERVER
+const CLIENT_ID = process.env.REACT_APP_CLIENT_ID
+const SERVER = process.env.REACT_APP_SERVER
 
 export const login = (credentials) => {
-  console.log('>>> cluient: ', CLIENT_ID)
-  console.log('>>> SERVER: ', SERVER)
-
   const LOTTOLAND_API_ENDPOINT = `${SERVER}/api/client/v1/players/login`
   const body = {
     grant_type: 'password',
@@ -17,8 +13,6 @@ export const login = (credentials) => {
     password: credentials.password,
     client_id: CLIENT_ID
   }
-
-  console.log(LOTTOLAND_API_ENDPOINT)
 
   return fetch(LOTTOLAND_API_ENDPOINT, { method: 'POST', body: body})
     .then(response => {

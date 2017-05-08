@@ -3,11 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
-    "react-scripts": "0.9.5",
+    "react-scripts": "^0.9.5",
     "styled-components": "^1.4.6"
   },
   "dependencies": {
-    "dotenv": "^4.0.0",
     "immutable": "^3.8.1",
     "prop-types": "^15.5.8",
     "react": "^15.5.4",
