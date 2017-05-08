@@ -9,7 +9,7 @@ export const login = (credentials) => {
   const LOTTOLAND_API_ENDPOINT = `${SERVER}/api/client/v1/players/login`
   const body = {
     grant_type: 'password',
-    username: credentials.name,
+    username: credentials.username,
     password: credentials.password,
     client_id: CLIENT_ID
   }
