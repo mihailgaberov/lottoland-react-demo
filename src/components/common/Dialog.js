@@ -3,6 +3,7 @@
  */
 
 import Button from './styled-components/Button'
+import StyledDialog from './styled-components/StyledDialog'
 import React, { Component } from 'react'
 import propTypes from 'prop-types'
 
@@ -20,7 +21,7 @@ class Dialog extends Component {
 
   render() {
     return (
-      <div className={this.props.modal ? 'Dialog DialogModal' : 'Dialog'}>
+      <StyledDialog>
         <div className={this.props.modal ? 'DialogModal__wrap' : null}>
           <div className='Dialog__header'>{this.props.header}</div>
           <div className='Dialog__body'>{this.props.children}</div>
@@ -32,7 +33,7 @@ class Dialog extends Component {
             </Button>
           </div>
         </div>
-      </div>
+      </StyledDialog>
     )
   }
 }
