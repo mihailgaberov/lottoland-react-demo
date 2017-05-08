@@ -15,22 +15,3 @@ export function logOut () {
     type: types.AUTH_LOGOUT
   }
 }
-
-export function authSuccess (token, user) {
-  return {
-    type: types.AUTH_SUCCESS,
-    payload: { token, user }
-  }
-}
-
-export function setUserInfo (token, user) {
-  return authSuccess(token, user)
-}
-
-export function authError (message) {
-  return {
-    type: types.AUTH_ERROR,
-    error: true,
-    payload: message
-  }
-}
