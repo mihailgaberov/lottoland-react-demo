@@ -25,8 +25,7 @@ class LoginDialog extends Component {
 
   render() {
     return (
-      <div className='LoginDialog' onClick={this.props.closeDialog}
-           onKeyPress={this.props.closeDialog}>
+      <div>
         <Dialog
           modal
           header='Login'

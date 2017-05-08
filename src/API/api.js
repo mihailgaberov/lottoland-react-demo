@@ -19,7 +19,6 @@ export const login = (credentials) => {
       return response.json()
     })
     .then(json => {
-      console.log('>>> reponse: ', json)
       return json.access_token !== null && json.error === null
     })
 }
