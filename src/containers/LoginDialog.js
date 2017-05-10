@@ -4,15 +4,18 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
-import { logIn } from '../actions/authActions'
+import { logIn, isAuthenticated } from '../actions/authActions'
 import Dialog from '../components/common/Dialog'
 import Form from '../components/common/Form'
+import ErrorMsg from '../components/common/styled-components/ErrorMsg'
 
 class LoginDialog extends Component {
 
   constructor() {
     super()
-    this.state = {}
+    this.state = {
+      isLoggged: false
+    }
   }
 
   submitLogin() {
@@ -26,6 +29,7 @@ class LoginDialog extends Component {
   render() {
     return (
       <div>
+        {this.isLoggged || <ErrorMsg>Wrong email or password. Please try again.</ErrorMsg>}
         <Dialog
           modal
           header='Login'
@@ -42,8 +46,10 @@ class LoginDialog extends Component {
   }
 }
 
-const mapStateToProps = () => {
-  return {}
+const mapStateToProps = (state) => {
+  return {
+    isLoggged: isAuthenticated(state)
+  }
 }
 
 const mapDispatchToProps = (dispatch) => {

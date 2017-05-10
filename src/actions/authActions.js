@@ -15,3 +15,12 @@ export function logOut () {
     type: types.AUTH_LOGOUT
   }
 }
+
+
+export function getToken (state) {
+  return state.getIn(['auth', 'access_token'], null)
+}
+
+export function isAuthenticated (state) {
+  //return getToken(state) !== null
+}
