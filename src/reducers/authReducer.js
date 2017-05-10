@@ -5,10 +5,16 @@
 import * as types from '../constants/actionTypes'
 import { Map, fromJS } from 'immutable'
 
+const setState = (state, newState) => {
+  state.mergeDeep(fromJS(newState))
+}
+
 export default function (state = Map(), action) {
   if (action.type === types.AUTH_SUCCESS) {
-    console.log(state.mergeDeep('>>> ', action.isLoginSuccessful))
-    return state.mergeDeep(fromJS(action.isLoginSuccessful))
+    console.log(state.mergeDeep('>>> isLoginSuccessful: ', action.isLoginSuccessful))
+    console.log(state.mergeDeep('>>> isLoginSuccessful: ', action.state))
+    // return state.mergeDeep(fromJS(action.isLoginSuccessful))
+    return setState(state, action.state)
   }
   if (action.type === types.AUTH_LOGOUT) {
     return Map()
