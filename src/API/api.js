@@ -2,7 +2,7 @@
  * Created by mgab on 05/05/2017.
  */
 
-const CLIENT_ID = process.env.REACT_APP_CLIENT_ID
+const PARTNER_ID = process.env.REACT_APP_PARTNER_ID
 const SERVER = process.env.REACT_APP_SERVER
 
 export const login = (credentials) => {
@@ -11,14 +11,22 @@ export const login = (credentials) => {
     grant_type: 'password',
     username: credentials.username,
     password: credentials.password,
-    client_id: CLIENT_ID
+    client_id: PARTNER_ID
   }
 
-  return fetch(LOTTOLAND_API_ENDPOINT, { method: 'POST', body: body })
-    .then(response => {
-      return response.json()
-    })
-    .then(json => {
-      return json
-    })
+  return fetch(LOTTOLAND_API_ENDPOINT, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded',
+        'Accept': 'application/json',
+        'X-API-KEY': PARTNER_ID
+      },
+      body: body
+    }
+  ).then(response => {
+    console.log('>>> response: ', response)
+    return response.json()
+  }).then(json => {
+    return json
+  })
 }

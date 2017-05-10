@@ -11,13 +11,6 @@ import ErrorMsg from '../components/common/styled-components/ErrorMsg'
 
 class LoginDialog extends Component {
 
-  constructor() {
-    super()
-    this.state = {
-      isLoggged: false
-    }
-  }
-
   submitLogin() {
     this.props.submitLogin(
       this.refs['loginForm'].refs['email'].getValue(),
