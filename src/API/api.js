@@ -19,7 +19,6 @@ export const login = (credentials) => {
       return response.json()
     })
     .then(json => {
-      console.log('>>> api json: ', json)
       return json
     })
 }

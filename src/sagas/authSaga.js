@@ -9,9 +9,7 @@ import * as types from '../constants/actionTypes'
 export function* authSaga({ payload }) {
   try {
     const authInfo = yield call(login, payload)
-
-    yield put({ type: types.AUTH_SUCCESS, authInfo })
-
+    yield put({ type: types.AUTH_RESPONSE, authInfo })
   } catch (error) {
     yield put({ type: types.AUTH_ERROR, error })
   }
