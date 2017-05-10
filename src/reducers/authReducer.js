@@ -11,9 +11,7 @@ const setState = (state, newState) => {
 
 export default function (state = Map(), action) {
   if (action.type === types.AUTH_SUCCESS) {
-    console.log(state.mergeDeep('>>> isLoginSuccessful: ', action.isLoginSuccessful))
-    console.log(state.mergeDeep('>>> isLoginSuccessful: ', action.state))
-    // return state.mergeDeep(fromJS(action.isLoginSuccessful))
+    console.log(state.mergeDeep('>>> action: ', action))
     return setState(state, action.state)
   }
   if (action.type === types.AUTH_LOGOUT) {

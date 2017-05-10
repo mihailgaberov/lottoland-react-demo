@@ -14,11 +14,12 @@ export const login = (credentials) => {
     client_id: CLIENT_ID
   }
 
-  return fetch(LOTTOLAND_API_ENDPOINT, { method: 'POST', body: body})
+  return fetch(LOTTOLAND_API_ENDPOINT, { method: 'POST', body: body })
     .then(response => {
       return response.json()
     })
     .then(json => {
-      return json.access_token !== null && json.error === null
+      console.log('>>> api json: ', json)
+      return json
     })
 }
