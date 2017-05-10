@@ -7,7 +7,7 @@ import { Map, fromJS } from 'immutable'
 
 export default function (state = Map(), action) {
   if (action.type === types.AUTH_SUCCESS) {
-    console.log(state.mergeDeep(action.isLoginSuccessful))
+    console.log(state.mergeDeep('>>> ', action.isLoginSuccessful))
     return state.mergeDeep(fromJS(action.isLoginSuccessful))
   }
   if (action.type === types.AUTH_LOGOUT) {
