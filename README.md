@@ -3,7 +3,7 @@ A demo app to backup an internal company presentation of FE technologies.
 
 @TODO: Add a link to the slides of the presentation.
 
-![Image of the app](https://github.com/mihailgaberov/lottoland-react-demo/blob/master/screenshot.png)
+![Image of the app](https://github.com/mihailgaberov/lottoland-react-demo/blob/master/screenshot.jpg)
 
 ## Running The App
 
