@@ -19,8 +19,7 @@ export function logOut () {
 
 
 export function getToken (state) {
-  const newState = Map(state).getIn(['auth', 'access_token'], null)
-  console.log('>>> new state: ', newState)
+  const newState = Map(state).getIn(['auth', 'authInfo', 'access_token'], null)
   return newState
 }
 
