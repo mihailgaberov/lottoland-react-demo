@@ -8,23 +8,21 @@ const SERVER = process.env.REACT_APP_SERVER
 export const login = (credentials) => {
   const LOTTOLAND_API_ENDPOINT = `${SERVER}/api/client/v1/players/login`
   const body = {
-    grant_type: 'password',
     username: credentials.username,
     password: credentials.password,
-    client_id: PARTNER_ID
+    client_id: PARTNER_ID,
+    grant_type: 'password'
   }
 
   return fetch(LOTTOLAND_API_ENDPOINT, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/x-www-form-urlencoded',
-        'Accept': 'application/json',
-        'X-API-KEY': PARTNER_ID
-      },
-      body: body
-    }
-  ).then(response => {
-    console.log('>>> response: ', response)
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'accept': 'application/json',
+      'x-api-key': PARTNER_ID
+    },
+    body: JSON.stringify(body)
+  }).then(response => {
     return response.json()
   }).then(json => {
     return json
