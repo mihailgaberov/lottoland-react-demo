@@ -17,6 +17,10 @@ export function logOut () {
   }
 }
 
+export function isError(state) {
+  const immutableState = Map(state)
+  return immutableState.getIn(['auth', 'authInfo', 'error'], null) !== null
+}
 
 export function getToken (state) {
   const immutableState = Map(state)

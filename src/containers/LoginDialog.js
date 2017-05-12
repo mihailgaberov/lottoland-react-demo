@@ -3,8 +3,12 @@
  */
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import propTypes from 'prop-types'
 
-import { logIn, isAuthenticated } from '../actions/authActions'
+import { logIn,
+         isAuthenticated,
+         isError
+} from '../actions/authActions'
 import Dialog from '../components/common/Dialog'
 import Form from '../components/common/Form'
 import ErrorMsg from '../components/common/styled-components/ErrorMsg'
@@ -22,7 +26,7 @@ class LoginDialog extends Component {
   render() {
     return (
       <div>
-        {this.isLoggged || <ErrorMsg>Wrong email or password. Please try again.</ErrorMsg>}
+        {(!this.props.isLoggged && this.props.isError) && <ErrorMsg>Wrong email or password. Please try again.</ErrorMsg>}
         <Dialog
           modal
           header='Login'
@@ -31,7 +35,6 @@ class LoginDialog extends Component {
           type='rounded'
           className='loginBtn'
         >
-          {this.props.error && <div className='error'>{this.props.error}</div>}
           <Form onSubmit={this.submitLogin.bind(this)} ref='loginForm' key='loginForm' fieldsIds={['email', 'password']}/>
         </Dialog>
       </div>
@@ -39,9 +42,15 @@ class LoginDialog extends Component {
   }
 }
 
+LoginDialog.propTypes = {
+  isLoggged: propTypes.bool.isRequired,
+  isError: propTypes.bool
+}
+
 const mapStateToProps = (state) => {
   return {
-    isLoggged: isAuthenticated(state)
+    isLoggged: isAuthenticated(state),
+    isError: isError(state)
   }
 }
 
