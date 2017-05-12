@@ -19,8 +19,8 @@ export function logOut () {
 
 
 export function getToken (state) {
-  const newState = Map(state).getIn(['auth', 'authInfo', 'access_token'], null)
-  return newState
+  const immutableState = Map(state)
+  return immutableState.getIn(['auth', 'authInfo', 'access_token'], null)
 }
 
 export function isAuthenticated (state) {
