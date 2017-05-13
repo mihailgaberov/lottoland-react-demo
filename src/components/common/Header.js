@@ -8,17 +8,8 @@ import PrivateRoute from '../../containers/PrivateRoute'
 import LoginDialog from '../../containers/LoginDialog'
 import HomePage from '../pages/HomePage'
 import LotteryPage from '../pages/LotteryPage'
-import { isAuthenticated } from '../../actions/authActions'
 
 class Header extends Component {
-
-  constructor(props) {
-    super(props)
-
-    this.state = {
-      isLogged: false
-    }
-  }
 
   render() {
     return (
@@ -31,7 +22,7 @@ class Header extends Component {
 
         <Route exact path='/' component={HomePage}/>
         <Route path='/login' component={LoginDialog}/>
-        <PrivateRoute path='/lotteries' auth={isAuthenticated(this.state)} component={LotteryPage}/>
+        <PrivateRoute path='/lotteries' component={LotteryPage}/>
       </div>
     )
   }
