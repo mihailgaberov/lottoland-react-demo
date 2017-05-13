@@ -22,11 +22,10 @@ class LoginDialog extends Component {
     )
   }
 
-
   render() {
     return (
       <div>
-        {(!this.props.isLoggged && this.props.isError) && <ErrorMsg>Wrong email or password. Please try again.</ErrorMsg>}
+        {(!this.props.isLogged && this.props.isError) && <ErrorMsg>Wrong email or password. Please try again.</ErrorMsg>}
         <Dialog
           modal
           header='Login'
@@ -43,13 +42,13 @@ class LoginDialog extends Component {
 }
 
 LoginDialog.propTypes = {
-  isLoggged: propTypes.bool.isRequired,
+  isLogged: propTypes.bool.isRequired,
   isError: propTypes.bool
 }
 
 const mapStateToProps = (state) => {
   return {
-    isLoggged: isAuthenticated(state),
+    isLogged: isAuthenticated(state),
     isError: isError(state)
   }
 }

@@ -20,11 +20,14 @@ const Wrapper = styled.section`
     padding: 4em;    
   }
 `
-
 const LotteryPage = () => (
-    <Wrapper>
-        <Title>Lotteries</Title>
-    </Wrapper>
+  <Wrapper>
+    <Title>Lotteries</Title>
+    <p>
+      Welcome!
+      <button onClick={() => history.push('/')}>Sign out</button>
+    </p>
+  </Wrapper>
 )
 
 export default LotteryPage
