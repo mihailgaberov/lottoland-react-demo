@@ -54,7 +54,7 @@ const mapStateToProps = (state) => {
         "jackpots": [
           {
             "lotteryId": "austriaLotto",
-            "jackpot": 0,
+            "jackpot": 10000,
             "marketingJackpot": 0
           }
         ],
@@ -71,7 +71,7 @@ const mapStateToProps = (state) => {
         "jackpots": [
           {
             "lotteryId": "cash4Life",
-            "jackpot": 0,
+            "jackpot": 222220,
             "marketingJackpot": 0
           }
         ],
