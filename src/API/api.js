@@ -28,3 +28,21 @@ export const login = (credentials) => {
     return json
   })
 }
+
+export const getLotteriesData = () => {
+  const LOTTOLAND_API_ENDPOINT = `${SERVER}/api/client/v1/drawings`
+
+  return fetch(LOTTOLAND_API_ENDPOINT, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+      'accept': 'application/json',
+      'x-api-key': PARTNER_ID
+    }
+  }).then(response => {
+    return response.json()
+  }).then(json => {
+    console.log('API: ', json)
+    return json
+  })
+}

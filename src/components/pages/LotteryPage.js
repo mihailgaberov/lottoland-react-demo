@@ -7,6 +7,7 @@ import { connect } from 'react-redux'
 
 import Button from '../common/styled-components/Button'
 import { logOut } from '../../actions/authActions'
+import { getLotteriesData, getData } from '../../actions/lotteriesDataActions'
 import Lotteries from '../Lotteries'
 
 const Wrapper = styled.section`
@@ -22,6 +23,15 @@ class LotteryPage extends Component {
   constructor() {
     super()
     this.logout = this.logout.bind(this)
+    this.getData = this.getData.bind(this)
+  }
+
+  componenDidMount() {
+    this.getData()
+  }
+
+  getData() {
+    this.props.getData()
   }
 
   logout() {
@@ -42,48 +52,49 @@ class LotteryPage extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    // lotteries: state.getLotteriesData()
-    lotteries : [
-      {
-        "id": "austriaLotto_2627",
-        "lotteryId": "austriaLotto",
-        "drawingDate": "2017-05-14T16:30:00.000+0000",
-        "closingDate": "2017-05-14T16:00:00.000+0000",
-        "state": "IN_PLAY",
-        "doubleJackpotAllowed": true,
-        "jackpots": [
-          {
-            "lotteryId": "austriaLotto",
-            "jackpot": 10000,
-            "marketingJackpot": 0
-          }
-        ],
-        "drawingType": "SU"
-      },
-
-      {
-        "id": "cash4Life_305",
-        "lotteryId": "cash4Life",
-        "drawingDate": "2017-05-16T01:00:00.000+0000",
-        "closingDate": "2017-05-16T00:00:00.000+0000",
-        "state": "IN_PLAY",
-        "doubleJackpotAllowed": true,
-        "jackpots": [
-          {
-            "lotteryId": "cash4Life",
-            "jackpot": 222220,
-            "marketingJackpot": 0
-          }
-        ],
-        "drawingType": "TU"
-      }
-    ]
+    lotteries: getLotteriesData(state)
+    // lotteries : [
+    //   {
+    //     "id": "austriaLotto_2627",
+    //     "lotteryId": "austriaLotto",
+    //     "drawingDate": "2017-05-14T16:30:00.000+0000",
+    //     "closingDate": "2017-05-14T16:00:00.000+0000",
+    //     "state": "IN_PLAY",
+    //     "doubleJackpotAllowed": true,
+    //     "jackpots": [
+    //       {
+    //         "lotteryId": "austriaLotto",
+    //         "jackpot": 10000,
+    //         "marketingJackpot": 0
+    //       }
+    //     ],
+    //     "drawingType": "SU"
+    //   },
+    //
+    //   {
+    //     "id": "cash4Life_305",
+    //     "lotteryId": "cash4Life",
+    //     "drawingDate": "2017-05-16T01:00:00.000+0000",
+    //     "closingDate": "2017-05-16T00:00:00.000+0000",
+    //     "state": "IN_PLAY",
+    //     "doubleJackpotAllowed": true,
+    //     "jackpots": [
+    //       {
+    //         "lotteryId": "cash4Life",
+    //         "jackpot": 222220,
+    //         "marketingJackpot": 0
+    //       }
+    //     ],
+    //     "drawingType": "TU"
+    //   }
+    // ]
   }
 }
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    logout: () => dispatch(logOut())
+    logout: () => dispatch(logOut()),
+    getData: () => dispatch(getData())
   }
 }
 
