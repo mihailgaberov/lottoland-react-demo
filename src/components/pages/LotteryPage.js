@@ -22,8 +22,6 @@ const Wrapper = styled.section`
 class LotteryPage extends Component {
 
   render() {
-    console.log('LotteryPage render...')
-
     return (
       <Wrapper>
         <Title>Lotteries</Title>

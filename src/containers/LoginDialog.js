@@ -4,6 +4,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import propTypes from 'prop-types'
+import { Redirect } from 'react-router-dom'
 
 import { logIn,
          isAuthenticated,
@@ -14,7 +15,6 @@ import Form from '../components/common/Form'
 import ErrorMsg from '../components/common/styled-components/ErrorMsg'
 
 class LoginDialog extends Component {
-
   submitLogin() {
     this.props.submitLogin(
       this.refs['loginForm'].refs['email'].getValue(),
@@ -23,7 +23,7 @@ class LoginDialog extends Component {
   }
 
   render() {
-    return (
+    return (this.props.isLogged ? <Redirect to={this.props.location.state.from.pathname}/> :
       <div>
         {(!this.props.isLogged && this.props.isError) && <ErrorMsg>Wrong email or password. Please try again.</ErrorMsg>}
         <Dialog

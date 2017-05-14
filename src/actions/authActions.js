@@ -22,6 +22,5 @@ export function getToken (state) {
 }
 
 export function isAuthenticated (state) {
-  console.log('>>> isAuth: ', getToken(state) !== null)
   return getToken(state) !== null
 }
