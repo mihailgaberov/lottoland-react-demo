@@ -3,22 +3,20 @@
  */
 import React, { Component } from 'react'
 import { Route, Redirect } from 'react-router-dom'
- import { isAuthenticated } from '../actions/authActions'
+import { connect } from 'react-redux'
+
+import { isAuthenticated } from '../actions/authActions'
 
 
-export default class PrivateRoute extends Component {
-
-  constructor(props) {
-    super(props)
-
-    console.log('>>> props: ', props)
-  }
+class PrivateRoute extends Component {
 
   render() {
-    let { component: Component, ...rest } = this.props
+    let { component: Component, isLogged, ...rest } = this.props
+
+    console.log(isLogged)
 
     return (
-      <Route {...rest} render={props => (isAuthenticated(this.state) ? (<Component {...props}/>) : (
+      <Route {...rest} render={props => (isLogged ? (<Component {...props}/>) : (
           <Redirect to={{
             pathname: '/login',
             state: { from: props.location }
@@ -28,3 +26,11 @@ export default class PrivateRoute extends Component {
     )
   }
 }
+
+const mapStateToProps = (state) => {
+  return {
+    isLogged: isAuthenticated(state),
+  }
+}
+
+export default connect(mapStateToProps)(PrivateRoute)

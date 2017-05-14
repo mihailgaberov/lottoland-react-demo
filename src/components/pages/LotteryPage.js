@@ -1,8 +1,7 @@
 /**
  * Created by mgab on 04/05/2017.
  */
-
-import React from 'react'
+import React, { Component } from 'react'
 import styled from 'styled-components'
 
 const Title = styled.h1`
@@ -17,17 +16,24 @@ const Wrapper = styled.section`
   background: papayawhip;
   
   @media only screen and (min-width: 680px) {
-    padding: 4em;    
+    padding: 4em;
   }
 `
-const LotteryPage = () => (
-  <Wrapper>
-    <Title>Lotteries</Title>
-    <p>
-      Welcome!
-      <button onClick={() => history.push('/')}>Sign out</button>
-    </p>
-  </Wrapper>
-)
+class LotteryPage extends Component {
+
+  render() {
+    console.log('LotteryPage render...')
+
+    return (
+      <Wrapper>
+        <Title>Lotteries</Title>
+        <p>
+          Welcome!
+          <button onClick={() => history.push('/')}>Sign out</button>
+        </p>
+      </Wrapper>
+    )
+  }
+}
 
 export default LotteryPage
