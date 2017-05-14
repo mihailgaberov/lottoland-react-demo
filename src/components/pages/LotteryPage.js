@@ -8,6 +8,7 @@ import { connect } from 'react-redux'
 
 import Button from '../common/styled-components/Button'
 import { logOut } from '../../actions/authActions'
+import Lotteries from '../Lotteries'
 
 const Title = styled.h1`
   font-size: 2.5em;
@@ -39,9 +40,7 @@ class LotteryPage extends Component {
     return (
       <Wrapper>
         <Title>Lotteries</Title>
-        <p>
-          Welcome!
-        </p>
+        <Lotteries />
         <div>
           <Button primary onClick={this.logout}>Logout</Button>
         </div>
