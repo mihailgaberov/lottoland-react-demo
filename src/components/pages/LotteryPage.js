@@ -3,19 +3,11 @@
  */
 import React, { Component } from 'react'
 import styled from 'styled-components'
-import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 
 import Button from '../common/styled-components/Button'
 import { logOut } from '../../actions/authActions'
 import Lotteries from '../Lotteries'
-
-const Title = styled.h1`
-  font-size: 2.5em;
-  font-family: Helvetica, Arial, sans-serif;
-  text-align: center;
-  color: palevioletred;
-`
 
 const Wrapper = styled.section`
   padding: 2em;
@@ -39,7 +31,6 @@ class LotteryPage extends Component {
   render() {
     return (
       <Wrapper>
-        <Title>Lotteries</Title>
         <Lotteries />
         <div>
           <Button primary onClick={this.logout}>Logout</Button>
