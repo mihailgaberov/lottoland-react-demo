@@ -3,6 +3,8 @@
  */
 import React, { Component } from 'react'
 import styled from 'styled-components'
+import { Link } from 'react-router-dom'
+import Button from '../common/styled-components/Button'
 
 const Title = styled.h1`
   font-size: 2.5em;
@@ -21,14 +23,28 @@ const Wrapper = styled.section`
 `
 class LotteryPage extends Component {
 
+  constructor() {
+    super()
+
+    this.logout = this.logout.bind(this)
+  }
+
+  logout() {
+    console.log('Logout!')
+  }
+
   render() {
     return (
       <Wrapper>
         <Title>Lotteries</Title>
         <p>
           Welcome!
-          <button onClick={() => history.push('/')}>Sign out</button>
         </p>
+        <div>
+          <Link to="/">
+            <Button primary onClick={this.logout}>Logout</Button>
+          </Link>
+        </div>
       </Wrapper>
     )
   }
