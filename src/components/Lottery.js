@@ -4,13 +4,13 @@
 import React,{ Component } from 'react'
 
 export default class Lottery extends Component {
-
-
   render() {
     return (
-      <div>
-
-      </div>
+      <ul>
+        <li>Name: {this.props.name}</li>
+        <li>Jackpot: {this.props.jackpot}</li>
+        <li>Drawing date: {this.props.drawingDate}</li>
+      </ul>
     )
   }
 }

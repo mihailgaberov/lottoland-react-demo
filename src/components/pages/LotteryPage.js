@@ -31,12 +31,53 @@ class LotteryPage extends Component {
   render() {
     return (
       <Wrapper>
-        <Lotteries />
+        <Lotteries lotteriesData={this.props.lotteries} />
         <div>
           <Button primary onClick={this.logout}>Logout</Button>
         </div>
       </Wrapper>
     )
+  }
+}
+
+const mapStateToProps = (state) => {
+  return {
+    // lotteries: state.getLotteriesData()
+    lotteries : [
+      {
+        "id": "austriaLotto_2627",
+        "lotteryId": "austriaLotto",
+        "drawingDate": "2017-05-14T16:30:00.000+0000",
+        "closingDate": "2017-05-14T16:00:00.000+0000",
+        "state": "IN_PLAY",
+        "doubleJackpotAllowed": true,
+        "jackpots": [
+          {
+            "lotteryId": "austriaLotto",
+            "jackpot": 0,
+            "marketingJackpot": 0
+          }
+        ],
+        "drawingType": "SU"
+      },
+
+      {
+        "id": "cash4Life_305",
+        "lotteryId": "cash4Life",
+        "drawingDate": "2017-05-16T01:00:00.000+0000",
+        "closingDate": "2017-05-16T00:00:00.000+0000",
+        "state": "IN_PLAY",
+        "doubleJackpotAllowed": true,
+        "jackpots": [
+          {
+            "lotteryId": "cash4Life",
+            "jackpot": 0,
+            "marketingJackpot": 0
+          }
+        ],
+        "drawingType": "TU"
+      }
+    ]
   }
 }
 
@@ -46,4 +87,4 @@ const mapDispatchToProps = (dispatch) => {
   }
 }
 
-export default connect(null, mapDispatchToProps)(LotteryPage)
+export default connect(mapStateToProps, mapDispatchToProps)(LotteryPage)
