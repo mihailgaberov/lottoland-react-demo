@@ -4,7 +4,10 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
+import { connect } from 'react-redux'
+
 import Button from '../common/styled-components/Button'
+import { logOut } from '../../actions/authActions'
 
 const Title = styled.h1`
   font-size: 2.5em;
@@ -25,12 +28,11 @@ class LotteryPage extends Component {
 
   constructor() {
     super()
-
     this.logout = this.logout.bind(this)
   }
 
   logout() {
-    console.log('Logout!')
+    this.props.logout()
   }
 
   render() {
@@ -41,13 +43,17 @@ class LotteryPage extends Component {
           Welcome!
         </p>
         <div>
-          <Link to="/">
-            <Button primary onClick={this.logout}>Logout</Button>
-          </Link>
+          <Button primary onClick={this.logout}>Logout</Button>
         </div>
       </Wrapper>
     )
   }
 }
 
-export default LotteryPage
+const mapDispatchToProps = (dispatch) => {
+  return {
+    logout: () => dispatch(logOut())
+  }
+}
+
+export default connect(null, mapDispatchToProps)(LotteryPage)

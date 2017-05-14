@@ -23,7 +23,7 @@ class LoginDialog extends Component {
   }
 
   render() {
-    return (this.props.isLogged ? <Redirect to={this.props.location.state.from.pathname}/> :
+    return (this.props.isLogged ? <Redirect to={this.props.location.state ? this.props.location.state.from.pathname : '/'}/> :
       <div>
         {(!this.props.isLogged && this.props.isError) && <ErrorMsg>Wrong email or password. Please try again.</ErrorMsg>}
         <Dialog

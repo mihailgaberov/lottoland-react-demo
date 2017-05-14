@@ -11,6 +11,12 @@ export function logIn (username, password) {
   }
 }
 
+export function logOut () {
+  return {
+    type: types.AUTH_LOGOUT
+  }
+}
+
 export function isError(state) {
   const immutableState = Map(state)
   return immutableState.getIn(['auth', 'authInfo', 'error'], null) !== null
