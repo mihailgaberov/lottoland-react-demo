@@ -13,12 +13,15 @@ export default class Lotteries extends Component {
 
     const lotteries = []
 
-    this.props.lotteriesData.forEach((entry) => {
-      lotteries.push(<Lottery name={entry.id}
-                              jackpot={entry.jackpots[0].jackpot}
-                              drawingDate={entry.drawingDate}
-                              key={entry.id} />)
-    })
+    if (this.props.lotteriesData) {
+      this.props.lotteriesData.forEach((entry) => {
+        lotteries.push(<Lottery name={entry.id}
+                                jackpot={entry.jackpots[0].jackpot}
+                                drawingDate={entry.drawingDate}
+                                key={entry.id} />)
+      })
+    }
+
 
     return (
       <div>
