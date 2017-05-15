@@ -42,7 +42,6 @@ export const getLotteriesData = () => {
   }).then(response => {
     return response.json()
   }).then(json => {
-    console.log('API: ', json)
     return json
   })
 }

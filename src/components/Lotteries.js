@@ -11,6 +11,11 @@ export default class Lotteries extends Component {
 
   render() {
 
+
+    this.props.lotteriesData.map((el) => {
+      console.log(el)
+    })
+
     const lotteries = []
 
     if (this.props.lotteriesData) {

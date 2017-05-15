@@ -12,6 +12,6 @@ export function getData () {
 
 
 export function getLotteriesData(state) {
-  // return getToken(state) !== null
-  console.log('from actions getDAta: ', state)
+  const immutableState = Map(state)
+  return immutableState.getIn(['lotteriesData', 'data'], [])
 }

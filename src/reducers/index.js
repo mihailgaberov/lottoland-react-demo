@@ -4,11 +4,11 @@
 import { combineReducers } from 'redux'
 
 import auth from './authReducer'
-import lotteriesDataReducer from './lotteriesDataReducer'
+import lotteriesData from './lotteriesDataReducer'
 
 const rootReducer = combineReducers({
   auth,
-  lotteriesDataReducer
+  lotteriesData
 })
 
 export default rootReducer

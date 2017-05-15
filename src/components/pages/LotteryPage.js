@@ -26,7 +26,7 @@ class LotteryPage extends Component {
     this.getData = this.getData.bind(this)
   }
 
-  componenDidMount() {
+  componentDidMount() {
     this.getData()
   }
 
