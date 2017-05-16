@@ -30,7 +30,7 @@ const HomePage = () => (
     <Highlighted>
       <ContactsElement position="left" width="352">
         <span>Mihail Gaberov</span>
-        <span>Front End Developer at <img src="https://www.lottoland.com/skins/lottoland/images/logo/ll-logo-green-14c4a0ddaf8c5179.svg" alt="Lottoland Logo" width="125" height="39"/></span>
+        <span>Front End Developer at <a href="https://www.lottoland.com" target="_blank"><img src="https://www.lottoland.com/skins/lottoland/images/logo/ll-logo-green-14c4a0ddaf8c5179.svg" alt="Lottoland Logo" width="125" height="39"/></a></span>
       </ContactsElement>
       <ContactsElement position="left" width="200">
         <div><em className="fa fa-lg fa-home" aria-hidden="true"/><a href="https://mihail-gaberov.eu">mihail-gaberov.eu</a></div>
