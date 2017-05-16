@@ -14,7 +14,7 @@ export default class Lottery extends Component {
         <li><img src={imgPath} alt={this.props.name} /></li>
         <li>Name: {this.props.name}</li>
         <li>Jackpots: <Jackpots data={this.props.jackpots} /></li>
-        <li>Drawing date: {this.props.drawingDate}</li>
+        <li>Drawing date: {new Date(this.props.drawingDate).toDateString()}</li>
       </ul>
     )
   }
