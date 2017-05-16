@@ -5,6 +5,7 @@ import React,{ Component } from 'react'
 import Title from './common/styled-components/Title'
 
 import Lottery from './Lottery'
+import StyledLotteries from '../components/common/styled-components/Lotteries'
 
 
 export default class Lotteries extends Component {
@@ -31,9 +32,9 @@ export default class Lotteries extends Component {
     return (
       <div>
         <Title>Lotteries</Title>
-        <div>
+        <StyledLotteries>
           {lotteriesToDisplay.length > 0 ? lotteriesToDisplay : 'No data.'}
-        </div>
+        </StyledLotteries>
       </div>
     )
   }
