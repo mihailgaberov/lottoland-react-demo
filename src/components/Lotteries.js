@@ -21,7 +21,7 @@ export default class Lotteries extends Component {
           return jackpotsToDisplay.push(el.getIn(['jackpot'], 0))
         })
 
-        return lotteriesToDisplay.push(<Lottery name={lottery.getIn(['id'], '')}
+        return lotteriesToDisplay.push(<Lottery name={lottery.getIn(['lotteryId'], '')}
                                 jackpots={jackpotsToDisplay}
                                 drawingDate={lottery.getIn(['drawingDate'], '')}
                                 key={Math.random()} />)
