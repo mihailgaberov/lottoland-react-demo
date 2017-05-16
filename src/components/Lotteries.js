@@ -14,19 +14,18 @@ export default class Lotteries extends Component {
 
     if (this.props.lotteriesData) {
       this.props.lotteriesData.map((lottery) => {
-        lotteriesToDisplay.push(<Lottery name={lottery.getIn(['id'], '')}
+        return lotteriesToDisplay.push(<Lottery name={lottery.getIn(['id'], '')}
                                 jackpot={lottery.getIn(['jackpots'], [])[0]}
                                 drawingDate={lottery.getIn(['drawingDate'], '')}
                                 key={Math.random()} />)
       })
     }
 
-
     return (
       <div>
         <Title>Lotteries</Title>
         <div>
-          {lotteriesToDisplay && 'No data.'}
+          {lotteriesToDisplay.length > 0 ? lotteriesToDisplay : 'No data.'}
         </div>
       </div>
     )
