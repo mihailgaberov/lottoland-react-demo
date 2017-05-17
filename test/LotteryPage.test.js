@@ -3,7 +3,7 @@
  */
 import React from 'react'
 import expect from 'expect'
-import { shallow } from 'enzyme'
+import { shallow , mount } from 'enzyme'
 import LotteryPage from '../src/components/pages/LotteryPage'
 import Lotteries from '../src/components/Lotteries'
 import Wrapper from '../src/components/common/styled-components/Wrapper'
@@ -12,7 +12,7 @@ import Button from '../src/components/common/styled-components/Button'
 const setup = () => {
   const props = {
     logout: expect.createSpy(),
-    dispatch: expect.createSpy()
+    dispatch: expect.createSpy(),
   }
 
   const store = {
@@ -20,7 +20,7 @@ const setup = () => {
     dispatch: () => {/* mock store */},
     getState: () => {/* mock store */},
   }
-  const Wrapper = shallow(<LotteryPage {...props} store={store} />)
+  const Wrapper = mount(<LotteryPage {...props} store={store} />)
   return { Wrapper, props }
 }
 
@@ -28,7 +28,7 @@ describe('Test for LotteryPage component', () => {
   it('should render self', () => {
     const { Wrapper } = setup()
     expect(Wrapper.length).toEqual(true)
-
+    expect(Wrapper.find('div').length).toEqual(3)
   })
 
   it('should render Wrapper component', () => {

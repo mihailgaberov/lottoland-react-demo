@@ -3,7 +3,7 @@
  */
 import React,{ Component } from 'react'
 import Title from './common/styled-components/Title'
-
+import { Map } from 'immutable'
 import Lottery from './Lottery'
 import StyledLotteries from '../components/common/styled-components/Lotteries'
 
@@ -15,16 +15,16 @@ export default class Lotteries extends Component {
 
     if (this.props.lotteriesData) {
       this.props.lotteriesData.map((lottery) => {
-        const jackpotsData = lottery.getIn(['jackpots'], [])
+        const jackpotsData = Map(lottery).getIn(['jackpots'], [])
         const jackpotsToDisplay = []
 
         jackpotsData.map((el) => {
-          return jackpotsToDisplay.push(el.getIn(['jackpot'], 0))
+          return jackpotsToDisplay.push(Map(el).getIn(['jackpot'], 0))
         })
 
-        return lotteriesToDisplay.push(<Lottery name={lottery.getIn(['lotteryId'], '')}
+        return lotteriesToDisplay.push(<Lottery name={Map(lottery).getIn(['lotteryId'], '')}
                                 jackpots={jackpotsToDisplay}
-                                drawingDate={lottery.getIn(['drawingDate'], '')}
+                                drawingDate={Map(lottery).getIn(['drawingDate'], '')}
                                 key={Math.random()} />)
       })
     }
