@@ -27,9 +27,10 @@ class LotteryPage extends Component {
   }
 
   render() {
+    const { lotteries } = this.props
     return (
       <Wrapper>
-        <Lotteries lotteriesData={this.props.lotteries} />
+        <Lotteries lotteriesData={lotteries} />
         <div>
           <Button primary onClick={this.logout}>Logout</Button>
         </div>
@@ -39,14 +40,12 @@ class LotteryPage extends Component {
 }
 
 LotteryPage.propTypes = {
-  lotteries: propTypes.object,
+  lotteries: propTypes.array,
   dispatch: propTypes.func.isRequired
 }
 
-const mapStateToProps = (state) => {
-  return {
-    lotteries: getLotteriesData(state)
-  }
-}
+const mapStateToProps = (state) => ({
+  lotteries: getLotteriesData(state)
+});
 
 export default connect(mapStateToProps)(LotteryPage)
