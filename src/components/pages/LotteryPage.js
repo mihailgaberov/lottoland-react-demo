@@ -32,7 +32,7 @@ class LotteryPage extends Component {
       <Wrapper>
         <Lotteries lotteriesData={lotteries} />
         <div>
-          <Button className='js-test' primary onClick={this.logout}>Logout</Button>
+          <Button primary onClick={this.logout}>Logout</Button>
         </div>
       </Wrapper>
     )
