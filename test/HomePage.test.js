@@ -20,26 +20,26 @@ describe('Test for HomePage component', () => {
     expect(wrapper.find('.fa-github-square').length).toEqual(1)
     expect(wrapper.find(Link).length).toEqual(1)
     expect(wrapper.find(Link).props().to).toEqual('lotteries')
-    expect(wrapper.find('div').length).toEqual(4);
+    expect(wrapper.find('div').length).toEqual(4)
   })
 
   it('should render Wrapper component', () => {
     const wrapper = shallow(<Wrapper />)
-    expect(wrapper.length).toEqual(1);
+    expect(wrapper.length).toEqual(1)
   })
 
   it('should render Title component', () => {
     const title = shallow(<Title />)
-    expect(title.length).toEqual(1);
+    expect(title.length).toEqual(1)
   })
 
   it('should render Highlighted component', () => {
     const highlighted = shallow(<Highlighted />)
-    expect(highlighted.length).toEqual(1);
+    expect(highlighted.length).toEqual(1)
   })
 
   it('should render ContactsElement component', () => {
     const contacts = shallow(<ContactsElement />)
-    expect(contacts.length).toEqual(1);
+    expect(contacts.length).toEqual(1)
   })
 })
