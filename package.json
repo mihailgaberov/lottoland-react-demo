@@ -4,8 +4,8 @@
   "private": true,
   "devDependencies": {
     "mocha": "^3.4.1",
-    "react-addons-test-utils": "^15.5.1",
     "react-scripts": "^0.9.5",
+    "react-test-renderer": "^15.5.4",
     "styled-components": "^1.4.6"
   },
   "dependencies": {
