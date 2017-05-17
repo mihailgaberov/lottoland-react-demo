@@ -3,21 +3,13 @@
  */
 import React from 'react'
 import { Link } from 'react-router-dom'
-import styled from 'styled-components'
 
+import Wrapper from '../common/styled-components/Wrapper'
 import Button from '../common/styled-components/Button'
 import Title from '../common/styled-components/Title'
 import Highlighted from '../common/styled-components/HighlightedArea'
 import ContactsElement from '../common/styled-components/ContactsElement'
 
-const Wrapper = styled.section`
-  padding: 2em;
-  background: papayawhip;
-  
-  @media only screen and (min-width: 680px) {
-    padding: 4em;    
-  }
-`
 
 const HomePage = () => (
   <Wrapper>
