@@ -10,7 +10,6 @@ export function getData () {
   }
 }
 
-
 export function getLotteriesData(state) {
   const immutableState = Map(state)
   return immutableState.getIn(['lotteriesData', 'data'], [])
