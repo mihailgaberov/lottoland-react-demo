@@ -4,9 +4,9 @@
 import React from 'react'
 import expect from 'expect'
 import { shallow, mount } from 'enzyme'
-import Lotteries from '../src/components/Lotteries'
-import Title from '../src/components/common/styled-components/Title'
-import StyledLotteries from '../src/components/common/styled-components/Lotteries'
+import Lotteries from '../../src/components/Lotteries'
+import Title from '../../src/components/common/styled-components/Title'
+import StyledLotteries from '../../src/components/common/styled-components/Lotteries'
 
 
 const setup = () => {

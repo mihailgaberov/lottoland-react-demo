@@ -5,11 +5,11 @@ import React from 'react'
 import expect from 'expect'
 import { Link } from  'react-router-dom'
 import { shallow } from 'enzyme'
-import HomePage from '../src/components/pages/HomePage'
-import Wrapper from '../src/components/common/styled-components/Wrapper'
-import Title from '../src/components/common/styled-components/Title'
-import Highlighted from '../src/components/common/styled-components/HighlightedArea'
-import ContactsElement from '../src/components/common/styled-components/ContactsElement'
+import HomePage from '../../src/components/pages/HomePage'
+import Wrapper from '../../src/components/common/styled-components/Wrapper'
+import Title from '../../src/components/common/styled-components/Title'
+import Highlighted from '../../src/components/common/styled-components/HighlightedArea'
+import ContactsElement from '../../src/components/common/styled-components/ContactsElement'
 
 describe('Test for HomePage component', () => {
   it('should render self and subcomponents', () => {

@@ -4,10 +4,10 @@
 import React from 'react'
 import expect from 'expect'
 import { shallow , mount } from 'enzyme'
-import LotteryPage from '../src/components/pages/LotteryPage'
-import Lotteries from '../src/components/Lotteries'
-import Wrapper from '../src/components/common/styled-components/Wrapper'
-import Button from '../src/components/common/styled-components/Button'
+import LotteryPage from '../../src/components/pages/LotteryPage'
+import Lotteries from '../../src/components/Lotteries'
+import Wrapper from '../../src/components/common/styled-components/Wrapper'
+import Button from '../../src/components/common/styled-components/Button'
 
 const setup = () => {
   const props = {
