@@ -38,4 +38,18 @@ describe('Auth Actions', () => {
     const state1 = state.mergeDeep(fromJS(resp))
     expect(actions.isError(state1)).toEqual(true)
   })
+
+  it('should provide method for checking if authenticated', () => {
+    const state = Map()
+    expect(actions.isAuthenticated(state)).toEqual(false)
+    const resp = {
+      'auth': {
+        'authInfo': {
+          'access_token': ''
+        }
+      }
+    }
+    const state1 = state.mergeDeep(fromJS(resp))
+    expect(actions.isAuthenticated(state1)).toEqual(true)
+  })
 })
