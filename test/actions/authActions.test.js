@@ -3,6 +3,7 @@
  */
 import * as actions from '../../src/actions/authActions'
 import * as types from '../../src/constants/actionTypes'
+import { Map, fromJS } from 'immutable'
 
 describe('Auth Actions', () => {
   it('should create an action to log in the user', () => {
@@ -21,5 +22,20 @@ describe('Auth Actions', () => {
       type: types.AUTH_LOGOUT
     }
     expect(actions.logOut()).toEqual(expectedAction)
+  })
+
+  it('should provide method for checking if errors', () => {
+    const state = Map()
+    expect(actions.isError(state)).toEqual(false)
+    const resp = {
+      'auth': {
+        'authInfo': {
+          "error": "invalid_grant",
+          "error_description": "LOGIN_FAILED"
+        }
+      }
+    }
+    const state1 = state.mergeDeep(fromJS(resp))
+    expect(actions.isError(state1)).toEqual(true)
   })
 })
