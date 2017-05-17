@@ -3,6 +3,7 @@
  */
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import propTypes from 'prop-types'
 
 import Wrapper from '../common/styled-components/Wrapper'
 import Button from '../common/styled-components/Button'
@@ -15,19 +16,14 @@ class LotteryPage extends Component {
   constructor() {
     super()
     this.logout = this.logout.bind(this)
-    this.getData = this.getData.bind(this)
   }
 
   componentDidMount() {
-    this.getData()
-  }
-
-  getData() {
-    this.props.getData()
+    this.props.dispatch(getData())
   }
 
   logout() {
-    this.props.logout()
+    this.props.dispatch(logOut())
   }
 
   render() {
@@ -42,17 +38,15 @@ class LotteryPage extends Component {
   }
 }
 
+LotteryPage.propTypes = {
+  lotteries: propTypes.object,
+  dispatch: propTypes.func.isRequired
+}
+
 const mapStateToProps = (state) => {
   return {
     lotteries: getLotteriesData(state)
   }
 }
 
-const mapDispatchToProps = (dispatch) => {
-  return {
-    logout: () => dispatch(logOut()),
-    getData: () => dispatch(getData())
-  }
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(LotteryPage)
+export default connect(mapStateToProps)(LotteryPage)
