@@ -28,4 +28,14 @@ describe('Lotteries Data reducer', () => {
 
     expect(reducer(initialState, testAction)).toEqual(expected)
   })
+
+  it('should handle the case when an error occurred', () => {
+    const testAction = { type: types.DATA_ERROR }
+
+    let state = Map()
+    state = state.set('asdasd', 'asdasd')
+    state = state.set('error', undefined)
+
+    expect(reducer(initialState, testAction)).toEqual(state)
+  })
 })
