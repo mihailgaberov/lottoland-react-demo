@@ -13,8 +13,8 @@ class Header extends Component {
 
   render() {
     return (
-      <div className="text-center">
-        <nav className="navbar navbar-default">
+      <div>
+        <nav >
           <Link to="/">Home</Link>
           {" | "}
           <Link to="/lotteries">Lotteries</Link>

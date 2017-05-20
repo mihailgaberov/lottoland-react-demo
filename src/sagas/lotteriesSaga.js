@@ -3,12 +3,12 @@
  */
 
 import { put, call } from 'redux-saga/effects'
-import { getLotteriesData } from '../API/api'
+import { getData } from '../API/api'
 import * as types from '../constants/actionTypes'
 
 export function* lotteriesSaga() {
   try {
-    const data = yield call(getLotteriesData)
+    const data = yield call(getData)
     yield put({ type: types.DATA_RESPONSE, data })
   } catch (error) {
     yield put({ type: types.DATA_ERROR, error })

@@ -40,7 +40,6 @@ class LotteryPage extends Component {
 }
 
 LotteryPage.propTypes = {
-  lotteries: propTypes.array,
   dispatch: propTypes.func.isRequired
 }
 

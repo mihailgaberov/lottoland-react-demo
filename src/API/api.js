@@ -29,7 +29,7 @@ export const login = (credentials) => {
   })
 }
 
-export const getLotteriesData = () => {
+export const getData = () => {
   const LOTTOLAND_API_ENDPOINT = `${SERVER}/api/client/v1/drawings`
 
   return fetch(LOTTOLAND_API_ENDPOINT, {
