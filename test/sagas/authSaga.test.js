@@ -4,7 +4,7 @@
 import expect from 'expect';
 import * as types from '../../src/constants/actionTypes'
 import { put, call } from 'redux-saga/effects';
-import authSaga from '../../src/sagas/authSaga';
+import { authSaga } from '../../src/sagas/authSaga';
 import { login } from '../../src/API/api';
 
 
