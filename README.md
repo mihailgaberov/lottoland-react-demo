@@ -1,7 +1,7 @@
 # lottoland-react-demo
 A demo app to backup an internal company presentation of FE technologies.
 
-@TODO: Add a link to the slides of the presentation.
+[The slides of the presentation here.](https://github.com/mihailgaberov/lottoland-react-demo/blob/master/presentation/react-redux-saga-lottoland.pptx)
 
 ![Image of the app](https://github.com/mihailgaberov/lottoland-react-demo/blob/master/frontpage.png)
 
