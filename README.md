@@ -13,19 +13,19 @@ To run the app, follow these steps.
 2. Install [yarn](https://yarnpkg.com/lang/en/docs/install/).
 3. From the project folder, execute the following command:
 
-  ```shell
+```shell
   yarn
-  ```
+```
  
 4. To run the app:
 
-  ```shell
+```shell
   yarn start
-  ```
+```
   
 5. To run the tests:
-   ```shell
+```shell
     yarn test
-   ```
+```
    
 6. Browse to [http://localhost:3000](http://localhost:3000)
