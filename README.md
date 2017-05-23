@@ -22,4 +22,10 @@ To run the app, follow these steps.
   ```shell
   yarn start
   ```
-5. Browse to [http://localhost:3000](http://localhost:3000)
+  
+5. To run the tests:
+   ```shell
+    yarn test
+   ```
+   
+6. Browse to [http://localhost:3000](http://localhost:3000)
