@@ -25,7 +25,7 @@ To run the app, follow these steps.
   
 5. To run the tests:
 ```shell
-    yarn test
+  yarn test
 ```
    
 6. Browse to [http://localhost:3000](http://localhost:3000)
