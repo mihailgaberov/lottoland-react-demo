@@ -28,7 +28,7 @@ describe('Test for LotteryPage component', () => {
   it('should render self', () => {
     const { Wrapper } = setup()
     expect(Wrapper.length).toEqual(true)
-    expect(Wrapper.find('div').length).toEqual(3)
+    expect(Wrapper.find('div').length).toEqual(4)
   })
 
   it('should render Wrapper component', () => {
