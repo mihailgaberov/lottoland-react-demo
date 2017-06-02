@@ -5,7 +5,7 @@ A demo app to backup an internal company presentation of FE technologies.
 
 [The slides of the presentation here (pdf).](https://www.slideshare.net/MihailGaberov/using-react-redux-and-saga-with-lottoland-apis-76296469)
 
-![Image of the app](https://github.com/mihailgaberov/lottoland-react-demo/blob/master/frontpage.png)
+![Image of the app](https://github.com/mihailgaberov/lottoland-react-demo/blob/master/images/frontpage.png)
 
 ## Running The App
 
