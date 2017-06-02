@@ -6,6 +6,7 @@ import Title from './common/styled-components/Title'
 import { Map } from 'immutable'
 import Lottery from './Lottery'
 import StyledLotteries from '../components/common/styled-components/Lotteries'
+import Spinner from '../components/common/styled-components/Spinner'
 
 
 export default class Lotteries extends Component {
@@ -33,7 +34,7 @@ export default class Lotteries extends Component {
       <div>
         <Title>Lotteries</Title>
         <StyledLotteries>
-          {lotteriesToDisplay.length > 0 ? lotteriesToDisplay : 'No data.'}
+          {lotteriesToDisplay.length > 0 ? lotteriesToDisplay : <Spinner />}
         </StyledLotteries>
       </div>
     )
